@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="980.0" prefWidth="1900.0" style="-fx-background-color: #dcdcdc;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="980.0" fitWidth="1900.0" layoutY="-1.0" opacity="0.46" pickOnBounds="true">
+         <image>
+            <Image url="@assets/copy2.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="1285.0" layoutY="1.0" prefHeight="105.0" prefWidth="222.0">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" layoutX="680.0" layoutY="112.0" onAction="#btnRepairOnAction" prefHeight="114.0" prefWidth="521.0" style="-fx-background-color: #4169e1; -fx-background-radius: 25;" text="Repair">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="389.0" layoutY="525.0" onAction="#btnVhclWrkLstOnAction" prefHeight="114.0" prefWidth="511.0" style="-fx-background-color: #4169e1; -fx-background-radius: 25;" text="Vehicle work list">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1020.0" layoutY="524.0" onAction="#btnEmpShftOnAction" prefHeight="114.0" prefWidth="511.0" style="-fx-background-color: #4169e1 #4169e1; -fx-background-radius: 25;" text="Employee Shift">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1261.0" layoutY="111.0" onAction="#btnWashOnAction" prefHeight="114.0" prefWidth="521.0" style="-fx-background-color: #4169e1; -fx-background-radius: 25;" text="Wash">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1338.0" layoutY="845.0" onAction="#btnOwnerLoginOnAction" prefHeight="89.0" prefWidth="487.0" style="-fx-background-color: #ffd700; -fx-background-radius: 25;" text="Owner Login">
+         <font>
+            <Font name="System Bold Italic" size="37.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblTime" layoutX="1675.0" layoutY="1.0" prefHeight="105.0" prefWidth="222.0">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="1545.0" layoutY="1.0" prefHeight="105.0" prefWidth="136.0" text="Time : ">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="1151.0" layoutY="1.0" prefHeight="105.0" prefWidth="136.0" text="Date : ">
+         <font>
+            <Font name="System Bold Italic" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="188.0" fitWidth="352.0" layoutX="3.0" layoutY="766.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/stock-illustration-171175065-removebg-preview%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="141.0" fitWidth="176.0" layoutX="869.0" layoutY="257.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/png-transparent-car-bmw-porsche-automobile-repair-shop-corey-s-german-auto-repair-car-thumbnail-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="160.0" layoutX="571.0" layoutY="646.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/istockphoto-1001115074-1024x1024-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="124.0" fitWidth="200.0" layoutX="1190.0" layoutY="661.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/png-clipart-computer-icons-working-time-workplace-job-others-miscellaneous-logo-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="208.0" fitWidth="295.0" layoutX="1377.0" layoutY="224.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/car-wash-logo-cleaning-car-icon-white-background-car-wash-logo-cleaning-car-icon-151779731-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="306.0" layoutY="822.0" text="Auto">
+         <font>
+            <Font name="Wingdings 3" size="68.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="822.0" text="DOC">
+         <font>
+            <Font name="Magneto Bold" size="68.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="112.0" onAction="#btnServiceOnAction" prefHeight="114.0" prefWidth="521.0" style="-fx-background-radius: 25; -fx-background-color: #4169e1;" text="Service">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="202.0" fitWidth="232.0" layoutX="244.0" layoutY="243.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/auto-service-logo-car-repair-icon-vector-22266860-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="186.0" layoutY="916.0" text="We give your vehicle a fresh look..!">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="57.0" fitWidth="68.0" layoutX="1713.0" layoutY="859.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/images-removebg-preview.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

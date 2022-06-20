@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RepairInvoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="65f1a9e8-d472-4039-8559-4d70652628c8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="Date &amp; Time" class="java.lang.String"/>
+	<parameter name="Repair ID" class="java.lang.String"/>
+	<parameter name="Vehicle Number" class="java.lang.String"/>
+	<parameter name="Fault Desc" class="java.lang.String"/>
+	<parameter name="Repair Done" class="java.lang.String"/>
+	<parameter name="Material Cost" class="java.lang.Double"/>
+	<parameter name="Labour Charge" class="java.lang.Double"/>
+	<parameter name="Total Cost" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<rectangle>
+				<reportElement x="272" y="13" width="280" height="36" backcolor="#F0EDED" uuid="61db9a72-27de-417f-a886-8e4e2d7cada1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="272" y="13" width="280" height="36" uuid="5792c9ff-38fc-4706-98c7-d597019a1089"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Repair Invoice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="10" width="140" height="33" uuid="5f966360-f49d-4c49-b1b7-e6276b481829"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[AUTODOC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="41" width="154" height="11" uuid="68208fca-df12-4758-8f0e-e5ba6e1c4509"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[We give your vehicle a fresh look..!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="65" width="100" height="20" uuid="305efb62-ef91-4c8e-8be7-6ad355f5a03c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact : 0762093858]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="79" width="209" height="20" uuid="a47ca6fa-f375-43e6-9f8b-097f75b192ca"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email : autodocworkshopgampaha@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="93" width="254" height="20" uuid="04afd216-d558-4365-8d67-0e6aff15579c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address : No.7/30, Thomas Avenue, Yakkala, Gampaha.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="5" width="56" height="30" uuid="7cdf8544-a865-4ff9-9e7b-a8e340417083"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date & Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="5" width="54" height="30" uuid="7588a72f-6f9b-4b41-82b8-3c9e3cf761dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repair ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="5" width="56" height="30" uuid="e245226a-8216-47ce-9054-018ebbafb4da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="5" width="56" height="30" uuid="7bc0a743-47aa-4397-a57d-e1a1729e8345"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fault Desciption]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="5" width="42" height="30" uuid="6844c714-d306-4ef0-849e-014a68ac3171"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repair Done]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="5" width="39" height="30" uuid="3c2c52d7-b39f-4fcf-8ea1-0776a50272d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Material Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="5" width="40" height="30" uuid="91179d44-1599-4ffa-8bc4-fea9f3424ecb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Labour Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="5" width="39" height="30" uuid="a647e523-a819-48c5-ab00-d0642041bd58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cost]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-10" width="555" height="1" uuid="9a147632-4ab4-451f-9b50-909a9917bbcd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="17" width="79" height="30" uuid="0de2cbc1-10e9-45bf-ac21-1be538325916"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Date & Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="85" y="17" width="48" height="30" uuid="390f39da-0375-414f-9546-abc4c58049e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Repair ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="17" width="55" height="30" uuid="c173ca1b-65dd-4f57-8381-87cb1593b0fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Vehicle Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="17" width="69" height="30" uuid="9c68742f-6aa3-44de-9925-49f10405d276"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Fault Desc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="17" width="71" height="30" uuid="b07d8cd4-30db-40f8-a394-7841061934d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Repair Done}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="18" width="42" height="30" uuid="5188e3a6-cb71-40af-b46b-2cdb142122db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Material Cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="18" width="43" height="30" uuid="4c1c4791-03e3-403f-a9fc-4a2b243dd5da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Labour Charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="17" width="44" height="30" uuid="7e714a81-1774-4e95-a62c-beef8e602c6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Total Cost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="361" y="0" width="90" height="45" uuid="219d0089-9c94-4327-8ac7-e3254de926e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="451" y="0" width="73" height="45" forecolor="#050505" uuid="19190380-b9ed-4276-9be2-fe8bcc790d0e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total Cost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

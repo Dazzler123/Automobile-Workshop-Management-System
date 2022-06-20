@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1008.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleWorkListFormController">
+   <children>
+      <TableView fx:id="tblService" layoutX="15.0" layoutY="9.0" prefHeight="286.0" prefWidth="1771.0">
+         <columns>
+            <TableColumn fx:id="colDateTime" prefWidth="97.00004768371582" text="Date &amp; Time" />
+            <TableColumn fx:id="colServiceID" minWidth="0.0" prefWidth="87.66661071777344" text="Service ID" />
+            <TableColumn fx:id="colVehicleNumber" prefWidth="122.66665649414062" text="Number" />
+            <TableColumn fx:id="colVehicleModel" prefWidth="115.33334350585938" text="Model" />
+            <TableColumn fx:id="colVehicleMake" prefWidth="111.66668701171875" text="Make" />
+            <TableColumn fx:id="colVehicleYOM" prefWidth="104.0" text="YOM" />
+            <TableColumn fx:id="colCustomerNIC" prefWidth="111.66668701171875" text="NIC" />
+            <TableColumn fx:id="colCustomerName" prefWidth="122.0" text="Name" />
+            <TableColumn fx:id="colCustomerMobile" minWidth="0.0" prefWidth="133.333251953125" text="Mobile" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="138.6666259765625" text="Address" />
+            <TableColumn fx:id="colOdometer" prefWidth="91.3333740234375" text="Odometer" />
+            <TableColumn fx:id="colServiceType" minWidth="9.0" prefWidth="111.3333740234375" text="Service Type" />
+            <TableColumn fx:id="colMaterialCost" minWidth="9.0" prefWidth="105.3333740234375" text="Material Cost" />
+            <TableColumn fx:id="colLabourCharge" minWidth="9.0" prefWidth="112.3333740234375" text="Labour Charge" />
+            <TableColumn fx:id="colTotalCost" minWidth="9.0" prefWidth="90.6666259765625" text="Total Cost" />
+            <TableColumn fx:id="colNextService" minWidth="9.0" prefWidth="108.0" text="Next Service" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblRepair" layoutX="16.0" layoutY="306.0" prefHeight="309.0" prefWidth="1769.0">
+         <columns>
+            <TableColumn fx:id="colDateTime1" prefWidth="106.33333587646484" text="Date &amp; Time" />
+            <TableColumn fx:id="colRepairID" prefWidth="86.66666412353516" text="Repair ID" />
+            <TableColumn fx:id="colVehicleNumber1" prefWidth="133.3333282470703" text="Number" />
+            <TableColumn fx:id="colVehicleYOM1" prefWidth="99.66665649414062" text="YOM" />
+            <TableColumn fx:id="colCustomerNIC1" prefWidth="121.66668701171875" text="NIC" />
+            <TableColumn fx:id="colCustomerName1" prefWidth="129.66668701171875" text="Name" />
+            <TableColumn fx:id="colCustomerMobile1" prefWidth="135.66668701171875" text="Mobile" />
+            <TableColumn fx:id="colCustomerAddress1" prefWidth="154.33331298828125" text="Address" />
+            <TableColumn fx:id="colFaultDescription" prefWidth="211.33331298828125" text="Fault Description" />
+            <TableColumn fx:id="colRepairDone" prefWidth="225.666748046875" text="Repair Done" />
+            <TableColumn fx:id="colMaterialCost1" prefWidth="121.3333740234375" text="Material Cost" />
+            <TableColumn fx:id="colLabourCharge1" prefWidth="122.333251953125" text="Labour Charge" />
+            <TableColumn fx:id="colTotalCost1" prefWidth="125.0" text="Total Cost" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblWash" layoutX="16.0" layoutY="625.0" prefHeight="268.0" prefWidth="1766.0">
+         <columns>
+            <TableColumn fx:id="colDateTime2" prefWidth="145.3333282470703" text="Date &amp; Time" />
+            <TableColumn fx:id="colWashID" prefWidth="98.66665649414062" text="Wash ID" />
+            <TableColumn fx:id="colVehicleNumber2" prefWidth="156.33334350585938" text="Number" />
+            <TableColumn fx:id="colVehicleYOM2" prefWidth="104.6666259765625" text="YOM" />
+            <TableColumn fx:id="colCustomerNIC2" prefWidth="168.33331298828125" text="NIC" />
+            <TableColumn fx:id="colCustomerName2" prefWidth="180.33331298828125" text="Name" />
+            <TableColumn fx:id="colCustomerMobile2" prefWidth="167.0" text="Mobile" />
+            <TableColumn fx:id="colCustomerAddress2" prefWidth="191.0" text="Address" />
+            <TableColumn fx:id="colWashType" prefWidth="411.0" text="Wash Type" />
+            <TableColumn fx:id="colFee" prefWidth="139.0" text="Fee" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1548.0" layoutY="908.0" onAction="#btnBackOnAction" prefHeight="76.0" prefWidth="175.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Back">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

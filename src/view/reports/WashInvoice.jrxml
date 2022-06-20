@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="WashInvoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b3db16ec-0810-4428-be0a-c66647836eb9">
+	<parameter name="Date &amp; Time" class="java.lang.String"/>
+	<parameter name="Wash ID" class="java.lang.String"/>
+	<parameter name="Vehicle Number" class="java.lang.String"/>
+	<parameter name="Wash Type" class="java.lang.String"/>
+	<parameter name="Fee" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="140" splitType="Stretch">
+			<rectangle>
+				<reportElement x="272" y="13" width="280" height="36" backcolor="#F0EDED" uuid="8b854930-35c5-4d30-9847-b766e10de4d6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="272" y="13" width="280" height="36" uuid="42f590fa-54a3-4f61-8f1c-a0b25a13faed"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Wash Invoice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="10" width="140" height="33" uuid="a0313737-55e3-4a6b-b69c-a320999fd106"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[AUTODOC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="41" width="144" height="11" uuid="e2913bea-5305-425e-beba-5c4188331b01"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[We give your vehicle a fresh look..!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="65" width="100" height="20" uuid="67833623-6e1b-40ac-8a55-35cfc5bc7e7f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact : 0762093858]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="79" width="213" height="20" uuid="aba2ace3-8f38-47ee-8ab2-8e3d02c5231d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email : autodocworkshopgampaha@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="93" width="266" height="20" uuid="fed3fcc5-a37a-41cb-b014-483c46e44ca1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address : No.7/30, Thomas Avenue, Yakkala, Gampaha.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="28" y="13" width="60" height="21" uuid="5fc3fa3d-3ae6-44cb-9633-8add71dee48d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date & Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="13" width="53" height="21" uuid="6128f616-2df5-4317-be6c-34983627a1e3"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wash ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="13" width="83" height="21" uuid="47fafbb6-7580-4960-ba52-a850eb3cf8e1"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="12" width="83" height="21" uuid="59b9cd99-b723-40fd-a434-fa90d2eeb251"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wash Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="12" width="43" height="21" uuid="33e5ad28-b8f3-455a-b19b-80616ef1b488"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fee]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="10" width="111" height="30" uuid="c51bae7b-4c9f-4d1c-9b77-b975282b9542"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Date & Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="10" width="78" height="30" uuid="95113dd1-aaf9-4eaa-8fc2-24e75e32a78a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Wash ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="191" y="10" width="111" height="30" uuid="7064e1e9-6dc0-4b59-a327-ba1ff11effa5"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Vehicle Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="10" width="146" height="30" uuid="8e415fe7-b324-48c5-abe5-5e5488b84d8d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Wash Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="10" width="76" height="30" uuid="6b5af67f-1321-4cfb-8eef-ca4f42df26f6"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Fee}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="3" width="555" height="1" uuid="a56999ab-bc88-434e-93ce-24009e4faa3d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="361" y="0" width="90" height="45" uuid="83a53201-ad07-4ad1-a670-3609d63a9dbb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="454" y="0" width="76" height="45" uuid="fa5e689f-749f-40cf-b37c-9a55edc8ae72"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Fee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="9" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="916.0" prefWidth="1811.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageServicedVehiclesFormController">
+   <children>
+      <VBox layoutX="1314.0" layoutY="408.0" prefHeight="232.0" prefWidth="426.0" spacing="10.0">
+         <children>
+            <JFXButton fx:id="btnUpdateOnAction" buttonType="RAISED" onAction="#btnUpdateOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="Update">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnDeleteOnAction" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="Delete">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="1319.0" layoutY="791.0" onAction="#btnCancelOnAction" prefHeight="76.0" prefWidth="426.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Cancel">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblService" layoutX="20.0" layoutY="19.0" prefHeight="328.0" prefWidth="1771.0">
+         <columns>
+            <TableColumn fx:id="colDateTIme" prefWidth="97.00004768371582" text="Date &amp; Time" />
+            <TableColumn fx:id="colServiceID" minWidth="0.0" prefWidth="87.66661071777344" text="Service ID" />
+            <TableColumn fx:id="colVehicleNumber" prefWidth="122.66665649414062" text="Number" />
+            <TableColumn fx:id="colVehicleModel" prefWidth="115.33334350585938" text="Model" />
+            <TableColumn fx:id="colVehicleMake" prefWidth="111.66668701171875" text="Make" />
+            <TableColumn fx:id="colVehicleYOM" prefWidth="104.0" text="YOM" />
+            <TableColumn fx:id="colCustomerNIC" prefWidth="111.66668701171875" text="NIC" />
+            <TableColumn fx:id="colCustomerName" prefWidth="122.0" text="Name" />
+            <TableColumn fx:id="colCustomerMobile" minWidth="0.0" prefWidth="133.333251953125" text="Mobile" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="138.6666259765625" text="Address" />
+            <TableColumn fx:id="colOdometer" prefWidth="91.3333740234375" text="Odometer" />
+            <TableColumn fx:id="colServiceType" minWidth="9.0" prefWidth="111.3333740234375" text="Service Type" />
+            <TableColumn fx:id="colMaterialCost" minWidth="9.0" prefWidth="105.3333740234375" text="Material Cost" />
+            <TableColumn fx:id="colLabourCharge" minWidth="9.0" prefWidth="112.3333740234375" text="Labour Charge" />
+            <TableColumn fx:id="colTotalCost" minWidth="9.0" prefWidth="90.6666259765625" text="Total Cost" />
+            <TableColumn fx:id="colNextService" minWidth="9.0" prefWidth="108.0" text="Next Service" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtVehicleNumber" layoutX="274.0" layoutY="378.0" onKeyReleased="#txtValidateOnAction" prefHeight="49.0" prefWidth="296.0" promptText="(WP)CAU-4545">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="28.0" layoutY="382.0" prefHeight="43.0" prefWidth="247.0" text="Vehicle Number : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleModel" layoutX="796.0" layoutY="374.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="320.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="576.0" layoutY="378.0" prefHeight="43.0" prefWidth="222.0" text="Vehicle Model : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleMake" layoutX="235.0" layoutY="463.0" onKeyReleased="#txtValidateOnAction" prefHeight="40.0" prefWidth="296.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="28.0" layoutY="466.0" prefHeight="43.0" prefWidth="211.0" text="Vehicle Make : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleYOM" layoutX="777.0" layoutY="459.0" onKeyReleased="#txtValidateOnAction" prefHeight="47.0" prefWidth="149.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="575.0" layoutY="464.0" prefHeight="43.0" prefWidth="199.0" text="Vehicle YOM : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerAddress" layoutX="821.0" layoutY="636.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="397.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="545.0" layoutY="641.0" prefHeight="43.0" prefWidth="275.0" text="Customer Address : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerNIC" layoutX="244.0" layoutY="548.0" onKeyReleased="#txtValidateOnAction" prefHeight="40.0" prefWidth="288.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="29.0" layoutY="553.0" prefHeight="43.0" prefWidth="222.0" text="Customer NIC : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerName" layoutX="803.0" layoutY="547.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="387.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="560.0" layoutY="551.0" prefHeight="43.0" prefWidth="247.0" text="Customer Name : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerMobile" layoutX="292.0" layoutY="634.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="247.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="30.0" layoutY="638.0" prefHeight="43.0" prefWidth="263.0" text="Customer Mobile : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxServiceType" labelFloat="true" layoutX="526.0" layoutY="723.0" prefHeight="55.0" prefWidth="309.0" promptText="Select Service type">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtMaterialCost" layoutX="378.0" layoutY="819.0" onKeyReleased="#txtValidateOnAction" prefHeight="39.0" prefWidth="184.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="202.0" layoutY="818.0" prefHeight="41.0" prefWidth="155.0" text="Material Cost : ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLabourCharge" layoutX="837.0" layoutY="819.0" onKeyReleased="#txtValidateOnAction" prefHeight="39.0" prefWidth="184.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="661.0" layoutY="818.0" prefHeight="41.0" prefWidth="163.0" text="Labour Charge : ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1016.0" layoutY="833.0" text="Rs." />
+      <JFXTextField fx:id="txtNextService" layoutX="1010.0" layoutY="735.0" onKeyReleased="#txtValidateOnAction" prefHeight="43.0" prefWidth="206.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="865.0" layoutY="734.0" prefHeight="43.0" prefWidth="150.0" text="Next Service : ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOdometer" layoutX="270.0" layoutY="712.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="211.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="32.0" layoutY="730.0" prefHeight="43.0" prefWidth="247.0" text="Odometer (KM) : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="563.0" layoutY="834.0" text="Rs." />
+      <Label layoutX="963.0" layoutY="471.0" prefHeight="43.0" prefWidth="175.0" text="Service ID : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblServiceID" layoutX="1131.0" layoutY="474.0" prefHeight="40.0" prefWidth="149.0" textFill="#1e00ff">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

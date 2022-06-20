@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ServiceInvoice" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="20a8dca9-bb9b-4a85-acb2-d04f3f407e7e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="Service ID" class="java.lang.String"/>
+	<parameter name="Date &amp; Time" class="java.lang.String"/>
+	<parameter name="Vehicle Number" class="java.lang.String"/>
+	<parameter name="Odometer" class="java.lang.Long"/>
+	<parameter name="Service Type" class="java.lang.String"/>
+	<parameter name="Material Cost" class="java.lang.Double"/>
+	<parameter name="Labour Charge" class="java.lang.Double"/>
+	<parameter name="Total Cost" class="java.lang.Double"/>
+	<parameter name="Next Service" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<rectangle>
+				<reportElement x="272" y="13" width="280" height="36" backcolor="#F0EDED" uuid="d43837a4-3060-43e9-8c1a-b07a4804e2c1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="272" y="13" width="280" height="36" uuid="f102e173-068d-42b9-abd4-a78fa75a5cf0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Service Invoice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="10" width="140" height="33" uuid="3ed919e8-8ba8-4f56-a253-19fe1c33e906"/>
+				<textElement>
+					<font size="26" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[AUTODOC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="41" width="144" height="11" uuid="6169902f-7a74-443d-8802-80606e6fcb7e"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[We give your vehicle a fresh look..!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="65" width="100" height="20" uuid="6c0c3cf8-3b0f-4087-be01-a7fba6bfa01a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact : 0762093858]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="79" width="213" height="20" uuid="d8de4218-b87c-43d1-9d6a-4a53e18d4d45"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email : autodocworkshopgampaha@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="93" width="274" height="20" uuid="f9f1a1d1-db74-47de-abb3-3e93a90b40fb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address : No.7/30, Thomas Avenue, Yakkala, Gampaha.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="6" width="47" height="31" uuid="526f2cf5-350d-4891-b329-5f92c0edff3b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date & Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="6" width="45" height="31" uuid="ba72b2e2-21b9-4633-b7e9-ccd4ae68c6f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="6" width="60" height="31" uuid="58c26a14-19f2-4739-b980-f7ac9388fa8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="6" width="57" height="31" uuid="820b7a18-183d-4f2a-b0d2-7f4d1247bb44"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Odometer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="6" width="37" height="31" uuid="c26d7970-d053-4881-9eec-b152ddda8864"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="6" width="41" height="31" uuid="be16d583-7d1f-41ab-91fb-62b03ebccfb7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Material Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="6" width="57" height="31" uuid="4d63aee3-6410-499a-835e-36cac6d94b54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Labour Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="6" width="37" height="31" uuid="750a6caa-a4e5-481b-b6df-1f236e3feb73"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="507" y="6" width="46" height="31" uuid="db3ac169-e4cc-4f19-8d1d-bb8d62a6c62c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Next Service]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="43" width="555" height="1" uuid="07aad2a6-18ba-4c12-87d6-620418b7ba88">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="66" y="12" width="38" height="30" uuid="e404f747-c2fd-48ad-9a4d-314327a0fa85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Service ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="12" width="60" height="30" uuid="e5f8a418-60ae-46f2-954b-a5ddd4aeae54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Date & Time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="13" width="85" height="30" uuid="765fdac4-0644-4a4a-8797-ec1bdb1521f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Vehicle Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="13" width="53" height="30" uuid="3b5f257f-5afa-4ed9-ac0b-25b1649723ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Odometer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="13" width="57" height="30" uuid="53ac56aa-77d4-4a5d-9bde-da1fe3935b99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Service Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="331" y="13" width="41" height="30" uuid="39328899-2d9e-482d-8c68-d9ffab96e3fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Material Cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="391" y="13" width="41" height="30" uuid="fd503a0b-948a-4097-be1f-d7f3a0a638f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Labour Charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="13" width="44" height="30" uuid="8e6b312f-092b-42f8-9ec6-a12e25c02f09"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Total Cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="13" width="42" height="30" uuid="02dfe226-3f3f-443a-9c6f-9bb7b3d53870"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{Next Service}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="361" y="0" width="90" height="45" uuid="b6ae057f-6f0a-4110-b785-7c425b3fcfb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="454" y="0" width="60" height="45" uuid="49edf832-bcfb-4576-8c72-3586d6ba5a16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Total Cost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

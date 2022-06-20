@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TotalSales" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="23337de9-e866-4f72-93b5-9c17d4184a0d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Automobile Workshop Data Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT SUM(s.labour_charge), SUM(s.material_cost), SUM(s.t_cost), SUM(r.labour_charge), SUM(r.material_cost), SUM(r.t_cost), SUM(w.fee)
+FROM service AS s, repair AS r, wash AS w;]]>
+	</queryString>
+	<field name="SUM(s.labour_charge)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(s.labour_charge)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(s.labour_charge)"/>
+	</field>
+	<field name="SUM(s.material_cost)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(s.material_cost)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(s.material_cost)"/>
+	</field>
+	<field name="SUM(s.t_cost)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(s.t_cost)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(s.t_cost)"/>
+	</field>
+	<field name="SUM(r.labour_charge)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(r.labour_charge)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(r.labour_charge)"/>
+	</field>
+	<field name="SUM(r.material_cost)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(r.material_cost)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(r.material_cost)"/>
+	</field>
+	<field name="SUM(r.t_cost)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(r.t_cost)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(r.t_cost)"/>
+	</field>
+	<field name="SUM(w.fee)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(w.fee)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(w.fee)"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="10" width="555" height="40" backcolor="#DBE0DA" uuid="5713d6db-a7de-4a80-8136-883385890edf"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="11" width="555" height="38" backcolor="#85E874" uuid="af29fa4a-a73f-4f87-b439-c28c5f19030b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Income Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="5" width="100" height="21" uuid="6681bcf4-0920-4e28-a4f3-b0e702dd72a7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="455" y="27" width="100" height="21" uuid="b6ccf84c-76ad-46ae-b29a-2a222137cb0b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="386" y="6" width="60" height="20" uuid="cdbec8f5-416e-44a9-b097-fa70cf6c8b0c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE  : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="28" width="60" height="20" uuid="a2a0a173-fa54-4656-9aed-572215c02595"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIME : ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<rectangle>
+				<reportElement x="417" y="5" width="126" height="30" forecolor="#050505" backcolor="#C7C3C3" uuid="955dd452-4edc-42c1-a7a4-c930ad69c1b8"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="417" y="5" width="126" height="30" forecolor="#050505" backcolor="#FFFFFF" uuid="ffe26ba0-1c67-4c41-bb96-662d94b1e2e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WASH]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="275" y="5" width="126" height="30" forecolor="#050505" backcolor="#C7C3C3" uuid="56e668ba-f112-4e5b-8e91-f57819218dc0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="275" y="5" width="126" height="30" forecolor="#050505" backcolor="#FFFFFF" uuid="fcea2494-8ac6-46f3-adf0-8ef0ed8e9ffa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPAIR]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="132" y="5" width="126" height="30" forecolor="#050505" backcolor="#C7C3C3" uuid="212731b9-efae-41b1-880c-b5379b25900d"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="132" y="5" width="126" height="30" forecolor="#050505" backcolor="#FFFFFF" uuid="94e6ae55-c59b-4db0-b7a3-58748495198c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVICE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="219" splitType="Stretch">
+			<line direction="BottomUp">
+				<reportElement x="267" y="3" width="1" height="179" uuid="8fbcad06-c891-4466-aebf-36e1ca6883b1">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement x="410" y="2" width="1" height="180" uuid="8a685ddb-610f-4c26-9ce1-018ae36f6d90">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="146" width="115" height="30" forecolor="#FF083D" backcolor="#FFFFFF" uuid="27309570-b23d-4398-8b33-662982fbb701">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="393fa6b2-bfcc-48cd-a648-97449fb9c2fa"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Grand Total      :  ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="139" width="555" height="1" uuid="8dd750e6-8de9-4fc9-9c7b-ce4c0b760864">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="188" width="555" height="1" uuid="5e4d4647-c87d-4803-8939-193fec48f4ff">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="0" y="194" width="555" height="1" uuid="c7f8c47e-e42a-47b3-b94c-aac8ab8e7a65">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="155" y="80" width="81" height="30" uuid="2fb33270-c1f2-4156-bf82-0e0d8b98c3fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de7016c6-101f-4d4a-823a-3ed0864c50d6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SUM(s.labour_charge)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="20" width="79" height="30" uuid="cf8636d8-4df7-4904-b014-020432cd01bc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="94a89ce6-b46c-4931-ac43-7b95933cacd5"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SUM(s.material_cost)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="146" width="79" height="30" uuid="08deb518-a31e-4f89-82b5-c6430b488b25">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f561292-6c87-4cc1-a1c1-3d0659214e63"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUM(s.t_cost)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="80" width="79" height="30" uuid="76a91570-7daa-4481-97b8-af869f8c747e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5a29a89-0174-4213-8114-85bd3ea47edd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SUM(r.labour_charge)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="20" width="79" height="30" uuid="b4e9f4c9-0760-48bc-b7f2-c11bbf49b179">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bb9e5bc4-c47c-4913-b0a8-ecfcecf00950"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{SUM(r.material_cost)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="146" width="79" height="30" uuid="1379c753-ad7c-4e71-b646-e6be9720a403">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ccbb73c2-40d1-44f8-87e9-88be299aaccb"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUM(r.t_cost)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="146" width="79" height="30" uuid="083d7688-2cff-46bd-8397-03908ef2d472">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25669522-9462-4263-a2c7-890e8d68c6b1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUM(w.fee)}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="20" width="133" height="30" uuid="7b02d4a2-5ee2-4917-8e3e-d96975e8698d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Material Cost     : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="77" width="133" height="30" uuid="a1475534-42cc-41f3-a3db-89af40c37a91"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Labour Charge  : ]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

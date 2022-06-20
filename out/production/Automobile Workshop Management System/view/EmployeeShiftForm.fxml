@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeShiftFormController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1800.0" opacity="0.25" pickOnBounds="true">
+         <image>
+            <Image url="@assets/mechanic-thumb-up-standing-hold-wrench.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="1570.0" layoutY="785.0" onAction="#btnBackOnAction" prefHeight="70.0" prefWidth="159.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Back">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="119.0" fitWidth="232.0" layoutX="39.0" layoutY="728.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/stock-illustration-171175065-removebg-preview%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="234.0" layoutY="758.0" prefHeight="58.0" prefWidth="103.0" text="Auto">
+         <font>
+            <Font name="Wingdings 3" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="754.0" prefHeight="73.0" prefWidth="138.0" text="DOC">
+         <font>
+            <Font name="Magneto Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="820.0" prefHeight="29.0" prefWidth="284.0" text="We give your vehicle a fresh look..!">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1408.0" layoutY="35.0" text="Date : ">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1408.0" layoutY="75.0" text="Time : ">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1482.0" layoutY="34.0" prefHeight="31.0" prefWidth="184.0">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1482.0" layoutY="76.0" prefHeight="31.0" prefWidth="175.0">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxEmpIDs" labelFloat="true" layoutX="110.0" layoutY="83.0" prefHeight="60.0" prefWidth="347.0" promptText="Select Employee ID">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <Label layoutX="566.0" layoutY="90.0" text="Employee Name : ">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmpName" layoutX="806.0" layoutY="87.0" prefHeight="45.0" prefWidth="422.0" textFill="#0018f5">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRecordArrival" buttonType="RAISED" layoutX="112.0" layoutY="264.0" onAction="#btnRecordArrivalOnAction" prefHeight="81.0" prefWidth="432.0" style="-fx-background-color: #1e90ff#1e90ff; -fx-background-radius: 10;" text="Record Arrival">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnRecordDeparture" buttonType="RAISED" layoutX="113.0" layoutY="434.0" onAction="#btnRecordDepartureOnAction" prefHeight="81.0" prefWidth="432.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 10;" text="Record Departure">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Accordion layoutX="911.0" layoutY="450.0" />
+   </children>
+</AnchorPane>

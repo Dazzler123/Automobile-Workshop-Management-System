@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ServiceReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1b11204-5871-4e6d-9bed-2e0b756148c1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Automobile Workshop Data Adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM Service;]]>
+	</queryString>
+	<field name="date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="time" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="time"/>
+		<property name="com.jaspersoft.studio.field.label" value="time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="s_Id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="s_Id"/>
+		<property name="com.jaspersoft.studio.field.label" value="s_Id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="vehicle_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vehicle_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="vehicle_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="customer_nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="customer_nic"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="odometer" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="odometer"/>
+		<property name="com.jaspersoft.studio.field.label" value="odometer"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="service_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="service_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="service_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="material_cost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="material_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="material_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="labour_charge" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="labour_charge"/>
+		<property name="com.jaspersoft.studio.field.label" value="labour_charge"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="t_cost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="t_cost"/>
+		<property name="com.jaspersoft.studio.field.label" value="t_cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<field name="next_service" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="next_service"/>
+		<property name="com.jaspersoft.studio.field.label" value="next_service"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="service"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="142" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="4" width="555" height="40" backcolor="#DBE0DA" uuid="768ff94a-52a1-4a93-b322-0c1d075f53cb"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="5" width="555" height="38" backcolor="#85E874" uuid="a752242e-7b36-4f2f-8522-de3b072a7263"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Service Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="57" width="100" height="21" uuid="c7adc662-5886-45e4-9aed-272c825b736f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="386" y="58" width="60" height="20" uuid="34522de0-7e24-4fc2-9fff-3e6a000e409f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE  : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="80" width="60" height="20" uuid="98d8d5b5-62c5-48b4-8d95-b93029b915fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIME : ]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="455" y="79" width="100" height="21" uuid="ec52f084-8715-45c1-9cc4-123823bdfe34"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="d8dc6879-6b01-4aed-adba-5bbee0e24e59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be58ca31-86f6-4eb7-885a-b76e644f2ea1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="40" height="30" uuid="6da81631-36bb-4ea0-9762-9d1318839886">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a348f776-8168-4e3f-a236-6c930ef1d9d1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="45" height="30" uuid="8efba112-6d2c-4b4e-a859-6cb46c0092f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b517cdb-fa77-4410-867e-91a3ce7a1cbd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="0" width="54" height="30" uuid="f611638f-22f2-49cd-b89c-f60be7de1019">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c8f26d47-1dbd-490a-860e-b56ecfe4cba6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="65" height="30" uuid="04a17fc0-8a98-42a8-8dd6-089236f18a3d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a31ab4da-90ab-44fa-9e2a-3909fd32a4db"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="0" width="50" height="30" uuid="cc8f4dcd-3c6b-4408-8f82-2f39cd4a4ee7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="446631a7-4286-4022-b84c-c924b0bbbc64"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Odometer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="0" width="45" height="30" uuid="070539c3-ba64-4ace-a476-9806bc138ff9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0db80f7b-01e1-4ed9-ac7e-1f93521f463f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="0" width="50" height="30" uuid="be64f8dd-5fa3-4436-8b0f-1bec1da180e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ea8a41e-288b-4fd4-ab01-37ce4c1a6d4d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Material Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="0" width="50" height="30" uuid="57253fa2-badb-4884-87f4-44d215a1aa5e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89f45883-0eae-48e0-8353-ca4d7b9f3333"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Labour Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="0" width="45" height="30" uuid="f8e604d0-a9e5-4d28-a050-7ef5fd66ab2c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e50e58f-e1ef-444f-a71c-d726709ba35f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="505" y="0" width="50" height="30" uuid="fc32a182-31fb-425e-b13e-bb6028914e15">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cebe914c-80a7-4423-9b20-6be5f2b6ecc4"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Next Service]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="37" width="555" height="1" uuid="add4fa6a-2538-46f9-84ac-8d11c20f76f4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="51" height="30" uuid="a6764cb6-ce1b-415b-b5a5-0961050ee688">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="be58ca31-86f6-4eb7-885a-b76e644f2ea1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="0" width="39" height="30" uuid="af0dfe4f-fe3a-4a13-a3f7-282c558d0ff7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a348f776-8168-4e3f-a236-6c930ef1d9d1"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="45" height="30" uuid="dace1eb2-9b0e-4d9c-ae29-031e912e1713">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b517cdb-fa77-4410-867e-91a3ce7a1cbd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{s_Id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="0" width="54" height="30" uuid="af9a4337-34b5-4c54-815c-caf8e049feb6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c8f26d47-1dbd-490a-860e-b56ecfe4cba6"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{vehicle_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="70" height="30" uuid="279d09f5-d53f-4cf7-8794-2b94016ac584">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a31ab4da-90ab-44fa-9e2a-3909fd32a4db"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{customer_nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="45" height="30" uuid="6ee47cb7-d0d1-4889-a3e1-5d05d653cc1d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="446631a7-4286-4022-b84c-c924b0bbbc64"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{odometer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="50" height="30" uuid="d1738261-3638-4269-9b83-9b974ef36e0e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0db80f7b-01e1-4ed9-ac7e-1f93521f463f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{service_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="50" height="30" uuid="e2913795-01b6-4dd4-8348-8a5fa4214282">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ea8a41e-288b-4fd4-ab01-37ce4c1a6d4d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{material_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="50" height="30" uuid="0db3e19d-083a-49e3-8c88-2d0aef71f159">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89f45883-0eae-48e0-8353-ca4d7b9f3333"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{labour_charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="50" height="30" uuid="b95f2417-d82f-4bcc-ae34-c3bc227c8622">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e50e58f-e1ef-444f-a71c-d726709ba35f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{t_cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="505" y="0" width="50" height="30" uuid="757d46ff-fcbe-401a-961e-1a6ea69dc993">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cebe914c-80a7-4423-9b20-6be5f2b6ecc4"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{next_service}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

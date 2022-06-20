@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="916.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddToRepairFormController">
+   <children>
+      <ImageView fitHeight="916.0" fitWidth="1800.0" opacity="0.31" pickOnBounds="true">
+         <image>
+            <Image url="@assets/istockphoto-1347150429-170667a.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblRepair" layoutX="17.0" layoutY="109.0" prefHeight="292.0" prefWidth="1769.0">
+         <columns>
+            <TableColumn fx:id="colDateTime" prefWidth="106.33333587646484" text="Date &amp; Time" />
+            <TableColumn fx:id="colRepairID" prefWidth="86.66666412353516" text="Repair ID" />
+            <TableColumn fx:id="colVehicleNumber" prefWidth="133.3333282470703" text="Number" />
+            <TableColumn fx:id="colVehicleYOM" prefWidth="99.66665649414062" text="YOM" />
+            <TableColumn fx:id="colCustomerNIC" prefWidth="121.66668701171875" text="NIC" />
+            <TableColumn fx:id="colCustomerName" prefWidth="129.66668701171875" text="Name" />
+            <TableColumn fx:id="colCustomerMobile" prefWidth="135.66668701171875" text="Mobile" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="154.33331298828125" text="Address" />
+            <TableColumn fx:id="colFaultDescription" prefWidth="211.33331298828125" text="Fault Description" />
+            <TableColumn fx:id="colRepairDone" prefWidth="225.666748046875" text="Repair Done" />
+            <TableColumn fx:id="colMaterialCost" prefWidth="121.3333740234375" text="Material Cost" />
+            <TableColumn fx:id="colLabourCharge" prefWidth="122.333251953125" text="Labour Charge" />
+            <TableColumn fx:id="colTotalCost" prefWidth="125.0" text="Total Cost" />
+         </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="591.0" prefHeight="43.0" prefWidth="281.0" text="Fault Description   : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMaterialCost" layoutX="1426.0" layoutY="595.0" onKeyReleased="#txtValidateOnAction" prefHeight="39.0" prefWidth="184.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="1253.0" layoutY="594.0" prefHeight="41.0" prefWidth="152.0" text="Material Cost : ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLabourCharge" layoutX="1428.0" layoutY="683.0" onKeyReleased="#txtValidateOnAction" prefHeight="39.0" prefWidth="184.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="1254.0" layoutY="682.0" prefHeight="41.0" prefWidth="163.0" text="Labour Charge : ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="740.0" layoutY="805.0" onAction="#btnCancelOnAction" prefHeight="76.0" prefWidth="175.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="Cancel">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPrintInvoice" buttonType="RAISED" layoutX="953.0" layoutY="804.0" onAction="#btnPrintInvoiceOnAction" prefHeight="76.0" prefWidth="395.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Print Invoice">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAddToRepair" buttonType="RAISED" layoutX="1359.0" layoutY="804.0" onAction="#btnAddToRepairOnAction" prefHeight="76.0" prefWidth="394.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="Add To Repair">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="57.0" fitWidth="67.0" layoutX="1688.0" layoutY="812.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons/download-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="1286.0" layoutY="825.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/icons/print-invoice-1073495-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="txtFaultDescription" layoutX="45.0" layoutY="645.0" onKeyReleased="#txtValidateOnAction" prefHeight="107.0" prefWidth="547.0" />
+      <TextArea fx:id="txtRepairDone" layoutX="631.0" layoutY="645.0" onKeyReleased="#txtValidateOnAction" prefHeight="107.0" prefWidth="547.0" />
+      <Label layoutX="627.0" layoutY="598.0" prefHeight="43.0" prefWidth="222.0" text="Repair Done   : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="1613.0" layoutY="613.0" text="Rs." />
+      <Label layoutX="1616.0" layoutY="702.0" text="Rs." />
+      <Label layoutX="1488.0" layoutY="15.0" text="Date : ">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="1488.0" layoutY="55.0" text="Time : ">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1562.0" layoutY="14.0" prefHeight="31.0" prefWidth="184.0">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1562.0" layoutY="56.0" prefHeight="31.0" prefWidth="175.0">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="119.0" fitWidth="232.0" layoutX="39.0" layoutY="751.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/icons/stock-illustration-171175065-removebg-preview%20-%20Copy.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="234.0" layoutY="781.0" prefHeight="58.0" prefWidth="103.0" text="Auto">
+         <font>
+            <Font name="Wingdings 3" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="776.0" prefHeight="73.0" prefWidth="138.0" text="DOC">
+         <font>
+            <Font name="Magneto Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="843.0" prefHeight="29.0" prefWidth="284.0" text="We give your vehicle a fresh look..!">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleNumber" layoutX="284.0" layoutY="25.0" onAction="#txtSearchVehicleOnAction" onKeyReleased="#txtValidateOnAction" prefHeight="49.0" prefWidth="296.0" promptText="(WP)CAU-4545">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="38.0" layoutY="29.0" prefHeight="43.0" prefWidth="247.0" text="Vehicle Number : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleYOM" layoutX="796.0" layoutY="22.0" onKeyReleased="#txtValidateOnAction" prefHeight="43.0" prefWidth="149.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="595.0" layoutY="25.0" prefHeight="43.0" prefWidth="199.0" text="Vehicle YOM : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerAddress" layoutX="983.0" layoutY="496.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="397.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="707.0" layoutY="501.0" prefHeight="43.0" prefWidth="275.0" text="Customer Address : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerNIC" layoutX="251.0" layoutY="415.0" onAction="#txtSearchCusOnAction" onKeyReleased="#txtValidateOnAction" prefHeight="40.0" prefWidth="288.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="36.0" layoutY="420.0" prefHeight="43.0" prefWidth="222.0" text="Customer NIC : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerName" layoutX="279.0" layoutY="499.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="387.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="36.0" layoutY="503.0" prefHeight="43.0" prefWidth="247.0" text="Customer Name : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerMobile" layoutX="971.0" layoutY="413.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="247.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="706.0" layoutY="418.0" prefHeight="43.0" prefWidth="263.0" text="Customer Mobile : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="974.0" layoutY="26.0" prefHeight="43.0" prefWidth="158.0" text="Repair ID : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRepairID" layoutX="1134.0" layoutY="28.0" prefHeight="40.0" prefWidth="116.0" textFill="#1e00ff">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

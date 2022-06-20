@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="918.0" prefWidth="1433.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <VBox layoutX="90.0" layoutY="39.0" prefHeight="707.0" prefWidth="1272.0" spacing="10.0">
+         <children>
+            <Label text="Service">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="88.0" prefWidth="1274.0" spacing="150.0">
+               <children>
+                  <JFXDatePicker fx:id="txtServiceDateFrom" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="FROM" showWeekNumbers="true" />
+                  <JFXDatePicker fx:id="txtServiceDateTo" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="TO" showWeekNumbers="true" />
+                  <JFXButton buttonType="RAISED" onAction="#btnGenServiceReport" prefHeight="81.0" prefWidth="358.0" style="-fx-background-color: blue; -fx-background-radius: 10;" text="Generate Report">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label text="Repair">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="88.0" prefWidth="1254.0" spacing="150.0">
+               <children>
+                  <JFXDatePicker fx:id="txtRepairDateFrom" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="FROM" showWeekNumbers="true" />
+                  <JFXDatePicker fx:id="txtRepairDateTo" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="TO" showWeekNumbers="true" />
+                  <JFXButton buttonType="RAISED" onAction="#btnGenRepairReport" prefHeight="81.0" prefWidth="358.0" style="-fx-background-color: yellow; -fx-background-radius: 10;" text="Generate Report">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label text="Wash">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="88.0" prefWidth="1254.0" spacing="150.0">
+               <children>
+                  <JFXDatePicker fx:id="txtWashDateFrom" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="FROM" showWeekNumbers="true" />
+                  <JFXDatePicker fx:id="txtWashDateTo" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="TO" showWeekNumbers="true" />
+                  <JFXButton buttonType="RAISED" onAction="#btnGenWashReport" prefHeight="81.0" prefWidth="358.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="Generate Report">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label text="Employee Attendance">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="88.0" prefWidth="1254.0" spacing="150.0">
+               <children>
+                  <JFXDatePicker fx:id="txtEmpAtdDateFrom" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="FROM" showWeekNumbers="true" />
+                  <JFXDatePicker fx:id="txtEmpAtdDateTo" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="TO" showWeekNumbers="true" />
+                  <JFXButton buttonType="RAISED" onAction="#btnGenEmpAtdReport" prefHeight="81.0" prefWidth="358.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Generate Report">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label text="Total Sales">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="86.0" prefWidth="1270.0" spacing="150.0">
+               <children>
+                  <JFXDatePicker fx:id="txtTotSalDateFrom" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="FROM" showWeekNumbers="true" />
+                  <JFXDatePicker fx:id="txtTotSalDateTo" defaultColor="ROYALBLUE" prefHeight="59.0" prefWidth="303.0" promptText="TO" showWeekNumbers="true" />
+                  <JFXButton buttonType="RAISED" onAction="#btnGenTotSalReport" prefHeight="81.0" prefWidth="358.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Generate Report">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="1221.0" layoutY="826.0" onAction="#btnBackOnAction" prefHeight="63.0" prefWidth="179.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Back">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

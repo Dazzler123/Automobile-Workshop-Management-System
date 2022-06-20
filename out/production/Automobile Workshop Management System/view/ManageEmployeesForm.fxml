@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageEmployeesFormController">
+   <children>
+      <TableView fx:id="tblEmployee" layoutX="84.0" layoutY="26.0" prefHeight="412.0" prefWidth="1626.0">
+        <columns>
+          <TableColumn fx:id="colEmpID" prefWidth="102.0" text=" ID" />
+          <TableColumn fx:id="colEmpNIC" minWidth="0.0" prefWidth="207.66665649414062" text=" NIC" />
+            <TableColumn fx:id="colEmpName" minWidth="0.0" prefWidth="375.3333740234375" text="Name" />
+            <TableColumn fx:id="colEmpMobile" minWidth="0.0" prefWidth="194.6666259765625" text="Mobile" />
+            <TableColumn fx:id="colEmpAddress" minWidth="0.0" prefWidth="314.6666259765625" text="Address" />
+            <TableColumn fx:id="colEmpJobRole" minWidth="0.0" prefWidth="253.3333740234375" text="Job Role" />
+            <TableColumn fx:id="colEmpSalary" minWidth="0.0" prefWidth="183.0" text="Salary" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtEmpAddress" layoutX="740.0" layoutY="578.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="319.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="605.0" layoutY="582.0" prefHeight="43.0" prefWidth="140.0" text="Address : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmpNIC" layoutX="145.0" layoutY="498.0" onKeyReleased="#txtValidateOnAction" prefHeight="40.0" prefWidth="288.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="68.0" layoutY="504.0" prefHeight="43.0" prefWidth="82.0" text="NIC : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmpName" layoutX="174.0" layoutY="579.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="378.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="67.0" layoutY="583.0" prefHeight="43.0" prefWidth="106.0" text="Name : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmpMobile" layoutX="724.0" layoutY="501.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="247.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="602.0" layoutY="506.0" prefHeight="43.0" prefWidth="124.0" text="Mobile : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmpJobRole" layoutX="206.0" layoutY="658.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="309.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="65.0" layoutY="663.0" prefHeight="43.0" prefWidth="149.0" text="Job Role : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmpSalary" layoutX="177.0" layoutY="740.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="309.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="68.0" layoutY="744.0" prefHeight="43.0" prefWidth="112.0" text="Salary : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <VBox layoutX="1291.0" layoutY="463.0" prefHeight="292.0" prefWidth="426.0" spacing="10.0">
+         <children>
+            <JFXButton fx:id="btnAddEmployeeOnAction" buttonType="RAISED" onAction="#btnAddEmpOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: #7fff00; -fx-background-radius: 10;" text=" Add Employee">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnUpdateEmployeeOnAction" buttonType="RAISED" onAction="#btnUpdateEmpOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="Update Employee">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnDeleteEmployeeOnAction" buttonType="RAISED" onAction="#btnDeleteEmpOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="Delete Employee">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="1295.0" layoutY="796.0" onAction="#btnCancelOnAction" prefHeight="76.0" prefWidth="426.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Cancel">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="567.0" layoutY="743.0" prefHeight="43.0" prefWidth="206.0" text="Employee ID : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmpID" layoutX="780.0" layoutY="745.0" prefHeight="40.0" prefWidth="76.0" textFill="#1e00ff">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

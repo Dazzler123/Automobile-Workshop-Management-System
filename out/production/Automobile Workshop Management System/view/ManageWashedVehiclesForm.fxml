@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageWashedVehiclesFormController">
+   <children>
+      <VBox layoutX="1300.0" layoutY="440.0" prefHeight="232.0" prefWidth="426.0" spacing="10.0">
+         <children>
+            <JFXButton fx:id="btnUpdateOnAction" buttonType="RAISED" onAction="#btnUpdateOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: green; -fx-background-radius: 10;" text="Update">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnDeleteOnAction" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="109.0" prefWidth="426.0" style="-fx-background-color: red; -fx-background-radius: 10;" text="Delete">
+               <font>
+                  <Font name="System Bold Italic" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </VBox>
+      <JFXButton buttonType="RAISED" layoutX="1301.0" layoutY="770.0" onAction="#btnCancelOnAction" prefHeight="76.0" prefWidth="426.0" style="-fx-background-color: orange; -fx-background-radius: 10;" text="Cancel">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblWash" layoutX="57.0" layoutY="17.0" prefHeight="386.0" prefWidth="1678.0">
+         <columns>
+            <TableColumn fx:id="colDateTime" prefWidth="145.3333282470703" text="Date &amp; Time" />
+            <TableColumn fx:id="colWashID" prefWidth="98.66665649414062" text="Wash ID" />
+            <TableColumn fx:id="colVehicleNumber" prefWidth="156.33334350585938" text="Number" />
+            <TableColumn fx:id="colVehicleYOM" prefWidth="104.6666259765625" text="YOM" />
+            <TableColumn fx:id="colCustomerNIC" prefWidth="168.33331298828125" text="NIC" />
+            <TableColumn fx:id="colCustomerName" prefWidth="180.33331298828125" text="Name" />
+            <TableColumn fx:id="colCustomerMobile" prefWidth="146.66668701171875" text="Mobile" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="194.666748046875" text="Address" />
+            <TableColumn fx:id="colWashType" prefWidth="360.333251953125" text="Wash Type" />
+            <TableColumn fx:id="colFee" prefWidth="131.3333740234375" text="Fee" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtVehicleNumber" layoutX="283.0" layoutY="413.0" onKeyReleased="#txtValidateOnAction" prefHeight="73.0" prefWidth="296.0" promptText="(WP)CAU-4545">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="37.0" layoutY="426.0" prefHeight="43.0" prefWidth="245.0" text="Vehicle Number : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleYOM" layoutX="807.0" layoutY="429.0" onKeyReleased="#txtValidateOnAction" prefHeight="43.0" prefWidth="149.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="606.0" layoutY="432.0" prefHeight="43.0" prefWidth="199.0" text="Vehicle YOM : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxWashType" labelFloat="true" layoutX="38.0" layoutY="712.0" prefHeight="55.0" prefWidth="337.0" promptText="Select Wash Type">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+      <JFXTextField fx:id="txtCustomerAddress" layoutX="955.0" layoutY="612.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="297.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="679.0" layoutY="617.0" prefHeight="43.0" prefWidth="275.0" text="Customer Address : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerNIC" layoutX="248.0" layoutY="517.0" onKeyReleased="#txtValidateOnAction" prefHeight="40.0" prefWidth="288.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="33.0" layoutY="522.0" prefHeight="43.0" prefWidth="222.0" text="Customer NIC : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerName" layoutX="277.0" layoutY="614.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="387.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="34.0" layoutY="618.0" prefHeight="43.0" prefWidth="247.0" text="Customer Name : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerMobile" layoutX="942.0" layoutY="516.0" onKeyReleased="#txtValidateOnAction" prefHeight="54.0" prefWidth="247.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="677.0" layoutY="521.0" prefHeight="43.0" prefWidth="263.0" text="Customer Mobile : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="986.0" layoutY="432.0" prefHeight="43.0" prefWidth="144.0" text="Wash ID : ">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblWashID" layoutX="1137.0" layoutY="434.0" prefHeight="40.0" prefWidth="135.0" textFill="#1e00ff">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
